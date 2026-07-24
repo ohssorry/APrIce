@@ -1,0 +1,27 @@
+{
+  "name": "aprice",
+  "version": "0.0.0",
+  "private": true,
+  "description": "유료 외부 API 호출의 월 예상 비용을 정적 분석하는 CLI 및 GitHub Action",
+  "license": "MIT",
+  "packageManager": "pnpm@11.4.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "corepack pnpm --recursive build",
+    "test": "corepack pnpm --recursive test",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{ts,mjs,json,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,mjs,json,yaml,yml}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vitest": "^4.0.8"
+  }
+}
