@@ -14,5 +14,10 @@
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "test": "vitest run --config ../../vitest.config.ts --root ."
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.7",
+    "@babel/traverse": "^7.29.7",
+    "@babel/types": "^7.29.7"
   }
 }
