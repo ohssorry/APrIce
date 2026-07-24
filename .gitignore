@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+*.tsbuildinfo
+
+aprice-result.json
+aprice-report.html
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
