@@ -61,7 +61,11 @@ const moduleDefinitions: Readonly<Record<string, ModuleDefinition>> = {
   },
 };
 
-const traverse = traverseModule.default;
+type TraverseFunction = typeof import('@babel/traverse').default;
+
+const traverse = (
+  typeof traverseModule === 'function' ? traverseModule : traverseModule.default
+) as TraverseFunction;
 
 export function detectPaidApiCalls(
   source: string,
