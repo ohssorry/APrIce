@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "generatedAt": "2026-07-25T00:00:00Z",
+  "repo": {
+    "name": "acme/web",
+    "baseRef": "main",
+    "headRef": "feat/chat"
+  },
+  "budget": {
+    "monthlyUsd": 300,
+    "currency": "USD"
+  },
+  "traffic": {
+    "dau": 1000,
+    "requestsPerUserPerDay": 3
+  },
+  "summary": {
+    "totalMonthlyUsd": 380,
+    "deltaMonthlyUsd": 180,
+    "verdict": "fail",
+    "detectionCount": 2
+  },
+  "detections": [
+    {
+      "id": "d1",
+      "provider": "openai",
+      "product": "gpt-4o-mini",
+      "file": "src/chat/service.ts",
+      "line": 42,
+      "snippet": "openai.chat.completions.create({...})",
+      "multiplier": 10,
+      "multiplierReason": "for 루프 내부 호출 (추정 반복 10회)",
+      "estimatedCallsPerMonth": 900000,
+      "estimatedMonthlyUsd": 380,
+      "unsupportedReason": null,
+      "confidence": "medium",
+      "isNew": true
+    },
+    {
+      "id": "d2",
+      "provider": "custom-ai",
+      "product": null,
+      "file": "src/legacy/custom-ai.ts",
+      "line": 18,
+      "snippet": "customAi.generate({...})",
+      "multiplier": 1,
+      "multiplierReason": "단일 호출",
+      "estimatedCallsPerMonth": 90000,
+      "estimatedMonthlyUsd": null,
+      "unsupportedReason": "가격 정보 없음",
+      "confidence": "low",
+      "isNew": true
+    }
+  ],
+  "skipped": [
+    {
+      "file": "src/legacy/broken.ts",
+      "reason": "parse_error"
+    }
+  ]
+}

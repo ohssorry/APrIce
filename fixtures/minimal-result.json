@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "generatedAt": "2026-07-25T00:00:00Z",
+  "repo": {
+    "name": "acme/empty",
+    "baseRef": null,
+    "headRef": null
+  },
+  "budget": {
+    "monthlyUsd": 0,
+    "currency": "USD"
+  },
+  "traffic": {
+    "dau": 0,
+    "requestsPerUserPerDay": 0
+  },
+  "summary": {
+    "totalMonthlyUsd": 0,
+    "deltaMonthlyUsd": null,
+    "verdict": "pass",
+    "detectionCount": 0
+  },
+  "detections": [],
+  "skipped": []
+}
