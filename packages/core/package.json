@@ -14,5 +14,9 @@
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "test": "vitest run --config ../../vitest.config.ts --root ."
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
   }
 }
