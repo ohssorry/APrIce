@@ -17,9 +17,11 @@ def test_guard_workflow_is_valid_yaml_and_exists():
     assert load() is not None
 
 
-def test_guard_triggers_only_on_pull_requests_targeting_develop():
+def test_guard_triggers_only_on_pull_requests_targeting_main():
+    # develop was the integration branch until the team folded it into main
+    # and deleted it (PR #68) -- main is now the only branch PRs target.
     workflow = load()
-    assert workflow[True]["pull_request"]["branches"] == ["develop"]
+    assert workflow[True]["pull_request"]["branches"] == ["main"]
 
 
 def test_guard_can_write_pull_request_comments():

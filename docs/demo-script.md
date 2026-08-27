@@ -120,7 +120,7 @@ Cost per request
 
 1. `src/aprice/`에 `call-in-loop`를 발생시키는 작은 변경(또는
    `tests/fixtures/sample_app.py`에 새 호출 하나 추가)으로 브랜치를 만들고
-   `develop` 대상 PR을 엽니다.
+   `main` 대상 PR을 엽니다.
 2. Guard가 몇 초 안에 코멘트를 답니다 — 비용 변화(`+$...`)와
    "new blocking risk" 표시가 실제로 뜨는 걸 화면에 그대로 녹화합니다.
 3. 녹화가 끝나면 이 데모 PR은 머지하지 말고 닫아주세요.

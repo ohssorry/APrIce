@@ -136,9 +136,9 @@ for user in users:  # users가 10명인지 1,000만 명인지 소스만으로는
 작업 트리와 staged/unstaged 변경은 건드리지 않습니다.
 
 ```console
-aprice diff --base origin/develop --head HEAD
-aprice diff --base origin/develop --head HEAD --format markdown
-aprice diff --base origin/develop --head HEAD --fail-on-risk
+aprice diff --base origin/main --head HEAD
+aprice diff --base origin/main --head HEAD --format markdown
+aprice diff --base origin/main --head HEAD --fail-on-risk
 ```
 
 `--fail-on-risk`는 비용이 올랐다는 이유만으로 실패하지 않습니다. 새 루프 호출,
@@ -147,7 +147,7 @@ aprice diff --base origin/develop --head HEAD --fail-on-risk
 
 ### 5. APrIce Guard
 
-이 저장소의 `develop` 대상 PR에서는
+이 저장소의 `main` 대상 PR에서는
 [APrIce Guard](.github/workflows/guard.yml)가 자동으로 실행됩니다.
 
 - 기준 브랜치와 PR의 요청당 비용 변화를 Markdown으로 요약
@@ -314,7 +314,7 @@ APrIce는 가격과 SDK가 계속 변한다는 전제에서 설계되었습니�
 - 문서, 예제, Windows/macOS/Linux 호환성 개선
 
 모든 변경은 Issue에서 문제와 근거를 공유한 뒤 브랜치와 PR을 만들고, 다른 팀원의
-리뷰를 거쳐 `develop`에 머지합니다. 자세한 절차는
+리뷰를 거쳐 `main`에 머지합니다. 자세한 절차는
 [CONTRIBUTING.md](CONTRIBUTING.md)를 확인하세요.
 
 ## 문서 안내
